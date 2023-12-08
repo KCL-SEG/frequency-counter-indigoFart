@@ -4,16 +4,8 @@
 def frequencies(items):
     frequencies = {}
     # Your code goes here
-
-    for i in range(len(items)):
-        items[i] = str(items[i])   
-        
-    itemsSet = set(items)
-    for item in itemsSet:
-        frequencies[item] = items.count(item)
-        
-
+    for item in items:
+        frequencies[str(item)] = frequencies.get(str(item), 0) + 1
     return frequencies
-
 
 
